@@ -31,3 +31,4 @@ def create_grid2(width,length):
 
 
 print(create_grid2(5,6))
+print ('haha')
