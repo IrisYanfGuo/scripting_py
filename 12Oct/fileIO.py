@@ -1,4 +1,6 @@
 from pylab import *
+
+
 # 1. read the file
 
 
@@ -17,7 +19,7 @@ def readfile(name):
 
 def grade(student, name, firstname):
     for i in range(len(student)):
-        if (name == student[i][1] and firstname == student[i][0]):
+        if name == student[i][1] and firstname == student[i][0]:
             return student[i][3]
     return "not found"
 
@@ -78,17 +80,20 @@ def convert2float(list):
     return mylist
 
 
-def count(list,grade):
+def count(llist, grade):
     count = 0
-    for i in list :
-        if (i==grade):
+    for i in llist:
+        if i == grade:
             count += 1
     return count
 
-mylist = [count(convert2float(student),i) for i in range(21)]
+
+# iteration
+mylist = [count(convert2float(student), i) for i in range(21)]
 print(mylist)
 
 figure()
-n, bins, patches = hist(convert2float(student), 20, range=(0,21), normed=0,histtype='stepfilled')
+n, bins, patches = hist(convert2float(student), 20, range=(0, 21), normed=0, histtype='stepfilled')
 title('Group x')
 show()
+# slice iteration generation map-reduce

@@ -1,3 +1,4 @@
+import sys
 # Python Exercises – Series 4
 # Location: My Bedroom
 # 13:28 19Oct2016
@@ -75,4 +76,7 @@ def mul_matrix(matrix1,matrix2):
     return result
 print(mul_matrix(mat1,mat2))
 
+f = open('matrix1.txt')
+a = 3
+b= a
 
