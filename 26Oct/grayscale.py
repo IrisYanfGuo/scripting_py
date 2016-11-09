@@ -4,10 +4,10 @@ from pylab import *
 # Oct 26th 2016
 
 img = imread("coins.png")
-print(img)
-#imshow(img,cmap='gray')
-#show()
-print(len(img),len(img[0]))
+#print(img)
+figure(1)
+imshow(img,cmap='gray')
+#print(len(img),len(img[0]))
 
 
 def derivative(alist):
@@ -48,6 +48,6 @@ def edgeDect(img):
         img_edges.append(t)
     return img_edges
 
-
+figure(2)
 imshow(edgeDect(img),cmap='gray')
 show()
